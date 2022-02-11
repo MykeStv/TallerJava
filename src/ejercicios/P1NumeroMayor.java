@@ -16,7 +16,7 @@ public class P1NumeroMayor {
     // METHODS
     public void devuelveNumeroMayor() {
         if (this.num1 == this.num2) {
-            System.out.println("Los números "+ num1 + " y "+ num2 + ": son iguales.");
+            System.out.println("Los números "+ num1 + " y "+ num2 + " son iguales.");
         } else if(this.num1 >= this.num2) {
             System.out.println("El número "+ this.num1 +" es mayor que "+ this.num2 +".");
         } else {

@@ -17,6 +17,7 @@ public class Main {
 
         System.out.print("\nProblema: ");
         int choice = sc.nextInt();
+        System.out.println("");
 
         switch (choice) {
             case 1:
@@ -26,7 +27,30 @@ public class Main {
                 break;
 
             case 2:
-                System.out.println("Hello world");
+                // Metodo que calcula cual es el numero mayor de los numeros ingresados
+                int num1;
+                int num2;
+
+                System.out.print("Ingrese el numero 1: ");
+                try {
+                    num1 = sc.nextInt();
+                } catch (Exception e) {
+                    //Si no se ingresa un numero, termina el switch
+                    System.out.println("No escribio un número entero");
+                    break;
+                }
+
+                System.out.print("Ingrese el numero 2: ");
+                try {
+                    num2 = sc.nextInt();
+                } catch (Exception e) {
+                    System.out.println("No escribio un número entero");
+                    break;
+                }
+
+                //Instancia la clase que calcula el numero mayor
+                P1NumeroMayor p2NumeroMayor = new P1NumeroMayor(num1, num2);
+                p2NumeroMayor.devuelveNumeroMayor();
                 break;
             case 3:
                 // hola
