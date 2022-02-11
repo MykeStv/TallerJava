@@ -52,8 +52,9 @@ public class Main {
                 P1NumeroMayor p2NumeroMayor = new P1NumeroMayor(num1, num2);
                 p2NumeroMayor.devuelveNumeroMayor();
                 break;
+
             case 3:
-                // hola
+                // Calcula el area del circulo
                 break;
 
         }
