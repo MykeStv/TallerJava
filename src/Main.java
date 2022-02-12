@@ -1,5 +1,6 @@
 import ejercicios.*;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
@@ -21,6 +22,7 @@ public class Main {
         System.out.println("9. Reemplaza el texto y concatena mensaje adicional");
         System.out.println("10. Remueve espacios de texto ingresado");
         System.out.println("11. Longitud de la frase y vocales que contiene");
+        System.out.println("12. Compara dos palabras si son iguales");
 
         System.out.print("\nProblema: ");
         int choice = sc.nextInt();
@@ -133,11 +135,16 @@ public class Main {
                 break;
 
             case 11:
-                //String phrase = "Hola alfonso arturo";
-                //System.out.println(phrase.chars().filter(ch -> ch == 'o').count());
+                // Ingresa una frase y cuenta su longitud. Tambien cuenta el numero de vocales en la frase
                 P11LongitudCantidadVocales longitudCantidadVocales = new P11LongitudCantidadVocales();
                 longitudCantidadVocales.mostrarLongitudVocales();
 
+                break;
+
+            case 12:
+                // Compara dos palabras si son iguales, y si no son iguales muestra la diferencia
+                P12ComparaPalabras comparaPalabras = new P12ComparaPalabras();
+                comparaPalabras.metodoComparaPalabras();
                 break;
 
         }
