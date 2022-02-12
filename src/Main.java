@@ -18,7 +18,7 @@ public class Main {
         System.out.println("6. Números impares y pares 1-100 [for loop]");
         System.out.println("7. Número igual o mayor a 0");
         System.out.println("8. Muestra si el día ingresado es laboral o no");
-        System.out.println("");
+        System.out.println("9. Reemplaza el texto y concatena mensaje adicional");
 
         System.out.print("\nProblema: ");
         int choice = sc.nextInt();
@@ -114,6 +114,16 @@ public class Main {
                 // Ingresa un día de la semana, muestra si es laboral o no
                 P8DiaLaboral diaLaboral = new P8DiaLaboral();
                 diaLaboral.mostrarDiaLaboral();
+                break;
+
+            case 9:
+                //Cambia las letras 'a' por 'e' del texto: “La sonrisa sera la mejor arma contra la tristeza”
+                // y concatena con mensaje adicional
+                String text = "La sonrisa sera la mejor arma contra la tristeza";
+                P9ReemplazaTexto reemplazaTexto = new P9ReemplazaTexto(text);
+                reemplazaTexto.finalText();
+                break;
+
 
         }
 
