@@ -19,6 +19,7 @@ public class Main {
         System.out.println("7. Número igual o mayor a 0");
         System.out.println("8. Muestra si el día ingresado es laboral o no");
         System.out.println("9. Reemplaza el texto y concatena mensaje adicional");
+        System.out.println("10. Remueve espacios de texto ingresado");
 
         System.out.print("\nProblema: ");
         int choice = sc.nextInt();
@@ -124,6 +125,15 @@ public class Main {
                 reemplazaTexto.finalText();
                 break;
 
+            case 10:
+                // Ingresa un texto y remueve sus espacios
+                P10RemoveSpaces removeSpaces = new P10RemoveSpaces();
+                removeSpaces.removeSpacesFromText();
+                break;
+
+            case 11:
+
+                break;
 
         }
 
