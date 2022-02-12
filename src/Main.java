@@ -1,6 +1,7 @@
 import ejercicios.P1NumeroMayor;
 import ejercicios.P3AreaCirculo;
 import ejercicios.P4Iva;
+import ejercicios.P5ParesImparesWhile;
 
 import java.util.Scanner;
 
@@ -16,6 +17,8 @@ public class Main {
         System.out.println("2. Ingresa dos números, verifica el mayor");
         System.out.println("3. Calcula el área de un circulo");
         System.out.println("4. Precio con IVA");
+        System.out.println("5. Números impares y pares 1-100 [while loop]");
+        System.out.println("6. Números impares y pares 1-100 [for loop]");
 
         System.out.print("\nProblema: ");
         int choice = sc.nextInt();
@@ -77,13 +80,24 @@ public class Main {
                     double precioProducto = Double.parseDouble(sc.next());
                     P4Iva productoConIva = new P4Iva(precioProducto);
                     double precioFinal = productoConIva.calcularPrecioIva();
-                    System.out.println("El precio del producto con IVA es: " + precioFinal);
+                    System.out.println("El precio del producto con IVA es: $" + precioFinal);
 
                 } catch (Exception e) {
                     System.out.println("No se ingresó un double correctamente!");
                 }
 
+                break;
 
+            case 5:
+                // Muestra los numeros pares y los impares del 1 al 100 con el ciclo While
+                P5ParesImparesWhile paresImparesWhile = new P5ParesImparesWhile();
+                paresImparesWhile.muestraParesImpares();
+
+                break;
+
+            case 6:
+                // Muestra los numeros pares y los impares del 1 al 100 con el ciclo "for"
+                
                 break;
 
         }
