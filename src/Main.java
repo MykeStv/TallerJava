@@ -1,4 +1,5 @@
 import ejercicios.P1NumeroMayor;
+import ejercicios.P3AreaCirculo;
 
 import javax.swing.plaf.synth.SynthOptionPaneUI;
 import java.util.Scanner;
@@ -13,7 +14,8 @@ public class Main {
         System.out.println("Selecciona un problema: (ingresando el numero entero)\n");
         System.out.println("1. Número mayor, igual o menor");
         System.out.println("2. Ingresa dos números, verifica el mayor");
-        System.out.println("3. ");
+        System.out.println("3. Calcula el área de un circulo");
+        System.out.println("4. Precio con IVA");
 
         System.out.print("\nProblema: ");
         int choice = sc.nextInt();
@@ -54,13 +56,26 @@ public class Main {
                 break;
 
             case 3:
-                // Calcula el area del circulo
+                // Calcula el area del circulo, ingresando un double
+
+                try {
+                    System.out.print("Radio del circulo: ");
+                    double num = Double.parseDouble(sc.next());
+                    P3AreaCirculo areaCirculo = new P3AreaCirculo(num);
+                    System.out.println("El area del circulo es: " + areaCirculo.calcularAreaCirculo());
+
+                } catch (Exception e) {
+                    System.out.println("No se ingresó un double!");
+                    System.out.println(e);
+                }
+                break;
+
+            case 4:
+                // Calcula el precio total con IVA del 21%
+                
                 break;
 
         }
-
-
-
 
 
 
