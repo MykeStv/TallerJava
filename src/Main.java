@@ -1,7 +1,7 @@
 import ejercicios.P1NumeroMayor;
 import ejercicios.P3AreaCirculo;
+import ejercicios.P4Iva;
 
-import javax.swing.plaf.synth.SynthOptionPaneUI;
 import java.util.Scanner;
 
 public class Main {
@@ -66,13 +66,24 @@ public class Main {
 
                 } catch (Exception e) {
                     System.out.println("No se ingresó un double!");
-                    System.out.println(e);
                 }
                 break;
 
             case 4:
                 // Calcula el precio total con IVA del 21%
-                
+
+                try {
+                    System.out.print("Precio del producto: ");
+                    double precioProducto = Double.parseDouble(sc.next());
+                    P4Iva productoConIva = new P4Iva(precioProducto);
+                    double precioFinal = productoConIva.calcularPrecioIva();
+                    System.out.println("El precio del producto con IVA es: " + precioFinal);
+
+                } catch (Exception e) {
+                    System.out.println("No se ingresó un double correctamente!");
+                }
+
+
                 break;
 
         }
