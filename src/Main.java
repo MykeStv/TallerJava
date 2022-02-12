@@ -16,6 +16,8 @@ public class Main {
         System.out.println("4. Precio con IVA");
         System.out.println("5. Números impares y pares 1-100 [while loop]");
         System.out.println("6. Números impares y pares 1-100 [for loop]");
+        System.out.println("7. Número igual o mayor a 0");
+        System.out.println("8. Día ingresado es laboral o no");
 
         System.out.print("\nProblema: ");
         int choice = sc.nextInt();
@@ -99,6 +101,17 @@ public class Main {
                 P6ParesImparesFor paresImparesFor = new P6ParesImparesFor();
                 paresImparesFor.mostrarParesImpares();
                 break;
+
+            case 7:
+                // Ingresa un numero y muestra si es mayor o igual a 0
+
+                P7MayorCero mayorCero = new P7MayorCero();
+                mayorCero.calcularMayorACero();
+                break;
+
+            case 8:
+                // Ingresa un día de la semana, muestra si es laboral o no
+                
 
         }
 
