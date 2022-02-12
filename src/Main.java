@@ -1,7 +1,4 @@
-import ejercicios.P1NumeroMayor;
-import ejercicios.P3AreaCirculo;
-import ejercicios.P4Iva;
-import ejercicios.P5ParesImparesWhile;
+import ejercicios.*;
 
 import java.util.Scanner;
 
@@ -90,6 +87,7 @@ public class Main {
 
             case 5:
                 // Muestra los numeros pares y los impares del 1 al 100 con el ciclo While
+                System.out.println("Numeros pares e impares, ciclo while");
                 P5ParesImparesWhile paresImparesWhile = new P5ParesImparesWhile();
                 paresImparesWhile.muestraParesImpares();
 
@@ -97,7 +95,9 @@ public class Main {
 
             case 6:
                 // Muestra los numeros pares y los impares del 1 al 100 con el ciclo "for"
-                
+                System.out.println("Numeros pares e impares, ciclo for");
+                P6ParesImparesFor paresImparesFor = new P6ParesImparesFor();
+                paresImparesFor.mostrarParesImpares();
                 break;
 
         }
