@@ -17,7 +17,8 @@ public class Main {
         System.out.println("5. Números impares y pares 1-100 [while loop]");
         System.out.println("6. Números impares y pares 1-100 [for loop]");
         System.out.println("7. Número igual o mayor a 0");
-        System.out.println("8. Día ingresado es laboral o no");
+        System.out.println("8. Muestra si el día ingresado es laboral o no");
+        System.out.println("");
 
         System.out.print("\nProblema: ");
         int choice = sc.nextInt();
@@ -111,7 +112,8 @@ public class Main {
 
             case 8:
                 // Ingresa un día de la semana, muestra si es laboral o no
-                
+                P8DiaLaboral diaLaboral = new P8DiaLaboral();
+                diaLaboral.mostrarDiaLaboral();
 
         }
 
