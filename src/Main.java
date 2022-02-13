@@ -159,7 +159,9 @@ public class Main {
                 break;
 
             case 14:
-
+                //Ingresa un número y devuelve numeros a partir de este de 2 en 2 hasta el 1000
+                P14NumerosHastaMil numerosHastaMil = new P14NumerosHastaMil();
+                numerosHastaMil.mostrarNumerosHastaMil();
                 break;
 
         }
