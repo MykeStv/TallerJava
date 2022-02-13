@@ -1,5 +1,7 @@
 import ejercicios.*;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -23,6 +25,8 @@ public class Main {
         System.out.println("10. Remueve espacios de texto ingresado");
         System.out.println("11. Longitud de la frase y vocales que contiene");
         System.out.println("12. Compara dos palabras si son iguales");
+        System.out.println("13. Fecha y hora actual");
+        System.out.println("14. Números de 2 en 2 hasta 1000");
 
         System.out.print("\nProblema: ");
         int choice = sc.nextInt();
@@ -145,6 +149,17 @@ public class Main {
                 // Compara dos palabras si son iguales, y si no son iguales muestra la diferencia
                 P12ComparaPalabras comparaPalabras = new P12ComparaPalabras();
                 comparaPalabras.metodoComparaPalabras();
+                break;
+
+            case 13:
+                // Devuelve la fecha y la hora actual
+                P13FechaHoraActual fechaHoraActual = new P13FechaHoraActual();
+                fechaHoraActual.formatearFechaHora();
+
+                break;
+
+            case 14:
+
                 break;
 
         }
