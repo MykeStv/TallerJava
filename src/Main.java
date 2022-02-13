@@ -27,6 +27,7 @@ public class Main {
         System.out.println("12. Compara dos palabras si son iguales");
         System.out.println("13. Fecha y hora actual");
         System.out.println("14. Números de 2 en 2 hasta 1000");
+        System.out.println("15. Programa menú de opciones");
 
         System.out.print("\nProblema: ");
         int choice = sc.nextInt();
@@ -162,6 +163,12 @@ public class Main {
                 //Ingresa un número y devuelve numeros a partir de este de 2 en 2 hasta el 1000
                 P14NumerosHastaMil numerosHastaMil = new P14NumerosHastaMil();
                 numerosHastaMil.mostrarNumerosHastaMil();
+                break;
+
+            case 15:
+                // Programa que muestra el menu de opciones
+                P15ProgramaMenu programaMenu = new P15ProgramaMenu();
+                programaMenu.menu();
                 break;
 
         }
