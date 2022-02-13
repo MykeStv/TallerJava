@@ -29,6 +29,7 @@ public class Main {
         System.out.println("14. Números de 2 en 2 hasta 1000");
         System.out.println("15. Programa menú de opciones");
         System.out.println("16. Persona");
+        System.out.println("17. Electrodomesticos");
 
         System.out.print("\nProblema: ");
         int choice = sc.nextInt();
@@ -215,10 +216,11 @@ public class Main {
                 System.out.println(persona2.toString());
                 System.out.println(persona3.toString());
 
+                break;
 
-
-
-
+            case 17:
+                P17Electrodomestico electrodomestico = new P17Electrodomestico(200, "azul", 'a', 10);
+                System.out.println(electrodomestico.toString());
                 break;
 
         }
