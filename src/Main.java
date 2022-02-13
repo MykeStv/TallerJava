@@ -174,9 +174,50 @@ public class Main {
 
             case 16:
                 // Llama a la clase persona y sus metodos
-                P16Persona persona = new P16Persona();
 
-                persona.generarDNI();
+                System.out.print("Ingrese el nombre: ");
+                String nombre = sc.next();
+                System.out.print("Ingrese la edad: ");
+                int edad = sc.nextInt();
+                System.out.print("Ingrese el sexo [H / M]: ");
+                //Recibe el primer elemento ingresado como un char
+                char sexo = sc.next().charAt(0);
+                sc.nextLine();
+                System.out.print("Ingrese el peso en kg: ");
+                double peso = sc.nextDouble();
+                System.out.print("Ingrese la altura en m: ");
+                double altura = sc.nextDouble();
+
+                P16Persona persona1 = new P16Persona(nombre, edad, sexo, peso, altura);
+                P16Persona persona2 = new P16Persona(nombre, edad, sexo);
+                P16Persona persona3 = new P16Persona();
+
+                persona3.setNombre("Jennifer");
+                persona3.setSexo('M');
+                persona3.setEdad(21);
+                persona3.setPeso(55);
+                persona3.setAltura(1.68);
+
+                persona1.esMayorDeEdad();
+                persona2.esMayorDeEdad();
+                persona3.esMayorDeEdad();
+
+                persona1.calcularIMC();
+                persona2.calcularIMC();
+                persona3.calcularIMC();
+
+                persona1.generarDNI();
+                persona2.generarDNI();
+                persona3.generarDNI();
+
+                System.out.println("");
+                System.out.println(persona1.toString());
+                System.out.println(persona2.toString());
+                System.out.println(persona3.toString());
+
+
+
+
 
                 break;
 
