@@ -28,6 +28,7 @@ public class Main {
         System.out.println("13. Fecha y hora actual");
         System.out.println("14. Números de 2 en 2 hasta 1000");
         System.out.println("15. Programa menú de opciones");
+        System.out.println("16. Persona");
 
         System.out.print("\nProblema: ");
         int choice = sc.nextInt();
@@ -169,6 +170,14 @@ public class Main {
                 // Programa que muestra el menu de opciones
                 P15ProgramaMenu programaMenu = new P15ProgramaMenu();
                 programaMenu.menu();
+                break;
+
+            case 16:
+                // Llama a la clase persona y sus metodos
+                P16Persona persona = new P16Persona();
+
+                persona.generarDNI();
+
                 break;
 
         }
