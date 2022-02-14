@@ -1,3 +1,4 @@
+// MAYCOL STEVEN RINCON BAYONA
 import ejercicios.*;
 
 import java.time.LocalDate;
@@ -34,7 +35,13 @@ public class Main {
         //System.out.println("0. SALIR");
 
         System.out.print("\nProblema: ");
-        int choice = sc.nextInt();
+        int choice;
+        try {
+            choice = sc.nextInt();
+        } catch (Exception e){
+            choice = 0;
+        }
+
         System.out.println("");
 
         switch (choice) {
@@ -308,6 +315,7 @@ public class Main {
                         "Los videojuegos entregados son: " + videoJuegosEntregados);
 
                 //Compara las series y videojuegos
+                System.out.println("");
                 int juego1 = 1;
                 int juego2 = 4;
                 int mayorHVideojuegos = videoJuegos[juego1].compareTo(videoJuegos[juego2]);
@@ -348,6 +356,8 @@ public class Main {
 
                 break;
 
+            default:
+                System.out.println("No se ingresó un valor válido del menu de problemas");
 
         }
 
