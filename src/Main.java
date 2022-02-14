@@ -30,7 +30,8 @@ public class Main {
         System.out.println("15. Programa menú de opciones");
         System.out.println("16. Persona");
         System.out.println("17. Electrodomesticos");
-        System.out.println("18. ");
+        System.out.println("18. Serie");
+        System.out.println("0. SALIR");
 
         System.out.print("\nProblema: ");
         int choice = sc.nextInt();
@@ -268,7 +269,8 @@ public class Main {
 
 
             case 18:
-
+                P18Serie serie = new P18Serie();
+                System.out.println(serie.toString());
                 break;
 
 
