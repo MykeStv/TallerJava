@@ -111,7 +111,7 @@ public class P17Electrodomestico {
     @Override
     public String toString() {
         return "P17Electrodomestico{" +
-                "precioBase=" + precio +
+                "precio=" + precio +
                 ", color='" + color + '\'' +
                 ", consumoEnergetico=" + consumoEnergetico +
                 ", peso=" + peso +
