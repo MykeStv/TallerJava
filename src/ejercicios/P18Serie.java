@@ -1,6 +1,6 @@
 package ejercicios;
 
-public class P18Serie {
+public class P18Serie implements P18Entregable {
     //ATTRIBUTES
     private String titulo;
     private int numeroTemporadas = 3;
@@ -22,6 +22,22 @@ public class P18Serie {
         this.numeroTemporadas = numeroTemporadas;
         this.genero = genero;
         this.creador = creador;
+    }
+
+    //METHODS
+    @Override
+    public void entregar() {
+        entregado = true;
+    }
+
+    @Override
+    public void devolver() {
+        entregado = false;
+    }
+
+    @Override
+    public boolean isEntregado() {
+        return entregado;
     }
 
     //GETTER && SETTER
@@ -68,4 +84,6 @@ public class P18Serie {
                 ", creador='" + creador + '\'' +
                 '}';
     }
+
+
 }
