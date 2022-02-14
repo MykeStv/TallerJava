@@ -1,6 +1,6 @@
 package ejercicios;
 
-public class P18VideoJuego {
+public class P18VideoJuego implements P18Entregable{
     //ATTRIBUTES
     private String titulo;
     private int horasEstimadas = 10;
@@ -22,6 +22,22 @@ public class P18VideoJuego {
         this.horasEstimadas = horasEstimadas;
         this.genero = genero;
         this.compañia = compañia;
+    }
+
+    //METHODS
+    @Override
+    public void entregar() {
+        entregado = true;
+    }
+
+    @Override
+    public void devolver() {
+        entregado = false;
+    }
+
+    @Override
+    public boolean isEntregado() {
+        return entregado;
     }
 
     //GETTER && SETTER
@@ -68,4 +84,5 @@ public class P18VideoJuego {
                 ", compañia='" + compañia + '\'' +
                 '}';
     }
+
 }

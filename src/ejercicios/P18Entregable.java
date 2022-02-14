@@ -6,6 +6,4 @@ public interface P18Entregable {
     void devolver();
     boolean isEntregado();
 
-
-
 }
