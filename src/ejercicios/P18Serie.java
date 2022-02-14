@@ -1,7 +1,7 @@
 package ejercicios;
 
 public class P18Serie {
-
+    //ATTRIBUTES
     private String titulo;
     private int numeroTemporadas = 3;
     private boolean entregado = false;
