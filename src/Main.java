@@ -30,7 +30,7 @@ public class Main {
         System.out.println("15. Programa menú de opciones");
         System.out.println("16. Persona");
         System.out.println("17. Electrodomesticos");
-        System.out.println("18. Serie");
+        System.out.println("18. Serie y Videojuegos");
         System.out.println("0. SALIR");
 
         System.out.print("\nProblema: ");
@@ -269,8 +269,83 @@ public class Main {
 
 
             case 18:
-                P18Serie serie = new P18Serie();
-                System.out.println(serie.toString());
+                //Instancia las clases series y videojuegos
+                P18Serie[] series = new P18Serie[5];
+                P18VideoJuego[] videoJuegos = new P18VideoJuego[5];
+
+                series[0] = new P18Serie("The Witcher", 2, "Fantasia", "Netflix");
+                series[1] = new P18Serie("El rey Arturito", "Imaginario");
+                series[2] = new P18Serie("Mr. Robot", 4, "Drama", "Sam Esmail");
+                series[3] = new P18Serie();
+                series[4] = new P18Serie("Breaking Bad", 5, "Crimen", "Vince Gilligan");
+
+                videoJuegos[0] = new P18VideoJuego("The Witcher 3", 150, "Rol de accion", "CD Project");
+                videoJuegos[1] = new P18VideoJuego("Dark Souls 3", 90, "Rol de accion", "FromSoftware");
+                videoJuegos[2] = new P18VideoJuego("Halo Reach", 51, "Shooter", "Bungie");
+                videoJuegos[3] = new P18VideoJuego("Far Cry 3", 40, "Shooter", "Ubisoft");
+                videoJuegos[4] = new P18VideoJuego("Darkest Dungeon", 106, "Role", "Red Hook Studies");
+
+                videoJuegos[2].entregar();
+                series[0].entregar();
+                videoJuegos[4].entregar();
+                series[2].entregar();
+                videoJuegos[1].entregar();
+
+                int seriesEntregadas = 0;
+                int videoJuegosEntregados = 0;
+
+                for (int i=0; i<series.length; i++){
+                    if (series[i].isEntregado()) {
+                        seriesEntregadas++;
+                    }
+                }
+                for (int i=0; i<videoJuegos.length; i++){
+                    if (videoJuegos[i].isEntregado()) {
+                        videoJuegosEntregados++;
+                    }
+                }
+                System.out.println("Las series entregadas son: " + seriesEntregadas + "\n" +
+                        "Los videojuegos entregados son: " + videoJuegosEntregados);
+
+                //Compara las series y videojuegos
+                int juego1 = 1;
+                int juego2 = 4;
+                int mayorHVideojuegos = videoJuegos[juego1].compareTo(videoJuegos[juego2]);
+
+                switch (mayorHVideojuegos) {
+                    case 1:
+                        System.out.println("El videojuego " + videoJuegos[juego1].getTitulo() +
+                                " tiene más horas de juego que el videojuego " + videoJuegos[juego2].getTitulo());
+                        break;
+                    case 0:
+                        System.out.println("El videojuego " + videoJuegos[juego1].getTitulo() +
+                                " tiene las mismas horas de juego que el videojuego " + videoJuegos[juego2].getTitulo());
+                        break;
+                    case -1:
+                        System.out.println("El videojuego " + videoJuegos[juego1].getTitulo() +
+                                " tiene menos horas de juego que el videojuego " + videoJuegos[juego2].getTitulo());
+                        break;
+                }
+
+                int serie1 = 2;
+                int serie2 = 0;
+                int mayorTSeries = series[serie1].compareTo(series[serie2]);
+
+                switch (mayorTSeries) {
+                    case 1:
+                        System.out.println("La serie "+ series[serie1].getTitulo() +
+                                " tiene mas temporadas que la serie "+ series[serie2].getTitulo());
+                        break;
+                    case 0:
+                        System.out.println("La serie "+ series[serie1].getTitulo() +
+                                " tiene las mismas temporadas que la serie "+ series[serie2].getTitulo());
+                        break;
+                    case -1:
+                        System.out.println("La serie "+ series[serie1].getTitulo() +
+                                " tiene menos temporadas que la serie "+ series[serie2].getTitulo());
+                        break;
+                }
+
                 break;
 
 

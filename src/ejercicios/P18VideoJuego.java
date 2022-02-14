@@ -40,6 +40,18 @@ public class P18VideoJuego implements P18Entregable{
         return entregado;
     }
 
+    public int compareTo(P18VideoJuego videoJuego) {
+        int value = 0;
+        if (this.horasEstimadas > videoJuego.horasEstimadas){
+            value = 1;
+        } else if (this.horasEstimadas == videoJuego.horasEstimadas){
+            value = 0;
+        } else if (this.horasEstimadas < videoJuego.horasEstimadas){
+            value = -1;
+        }
+        return value;
+    }
+
     //GETTER && SETTER
     public String getTitulo() {
         return titulo;

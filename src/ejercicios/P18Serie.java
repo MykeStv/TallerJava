@@ -40,6 +40,19 @@ public class P18Serie implements P18Entregable {
         return entregado;
     }
 
+    //@Override
+    public int compareTo(P18Serie serie) {
+        int value = 0;
+        if (this.numeroTemporadas > serie.numeroTemporadas){
+            value = 1;
+        } else if (this.numeroTemporadas == serie.numeroTemporadas){
+            value = 0;
+        } else if (this.numeroTemporadas < serie.numeroTemporadas){
+            value = -1;
+        }
+        return value;
+    }
+
     //GETTER && SETTER
     public String getTitulo() {
         return titulo;
