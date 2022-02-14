@@ -40,4 +40,18 @@ public class P17SubTelevision extends P17Electrodomestico {
     public boolean isSintonizadorTDT() {
         return sintonizadorTDT;
     }
+
+    //toString
+
+    @Override
+    public String toString() {
+        return "P17SubTelevision{" +
+                "precio=" + precio +
+                ", color='" + color + '\'' +
+                ", consumoEnergetico=" + consumoEnergetico +
+                ", peso=" + peso +
+                ", resolucion=" + resolucion +
+                ", sintonizadorTDT=" + sintonizadorTDT +
+                '}';
+    }
 }

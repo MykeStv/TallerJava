@@ -32,4 +32,17 @@ public class P17SubLavadora extends P17Electrodomestico{
     public int getCarga() {
         return carga;
     }
+
+    //toString
+
+    @Override
+    public String toString() {
+        return "P17SubLavadora{" +
+                "precio=" + precio +
+                ", color='" + color + '\'' +
+                ", consumoEnergetico=" + consumoEnergetico +
+                ", peso=" + peso +
+                ", carga=" + carga +
+                '}';
+    }
 }

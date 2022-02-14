@@ -219,12 +219,41 @@ public class Main {
                 break;
 
             case 17:
-                P17Electrodomestico electrodomestico = new P17Electrodomestico(200, "azul", 'a', 10);
-                System.out.println(electrodomestico.toString());
+                //P17Electrodomestico electrodomestico = new P17Electrodomestico(200, "azul", 'a', 10);
+                //System.out.println(electrodomestico.toString());
+                P17Electrodomestico[] electrodomesticos = new P17Electrodomestico[10];
+                electrodomesticos[0] = new P17SubLavadora(100, "azul",'A', 20, 40);
+                electrodomesticos[0].precioFinal();
+                electrodomesticos[1] = new P17SubTelevision(200, "rojo", 'b', 10, 45, true);
+                electrodomesticos[1].precioFinal();
+                electrodomesticos[2] = new P17SubTelevision(100, "purpura", 'C', 5, 30, false);
+                electrodomesticos[2].precioFinal();
+                electrodomesticos[3] = new P17SubLavadora(200, "blanco", 'B', 30, 50);
+                electrodomesticos[3].precioFinal();
+                electrodomesticos[4] = new P17SubLavadora(100, "gris", 'E', 20, 20);
+                electrodomesticos[4].precioFinal();
+                electrodomesticos[5] = new P17SubTelevision(300, "rojo", 'C', 20, 60, true);
+                electrodomesticos[5].precioFinal();
+                electrodomesticos[6] = new P17SubLavadora(200, "azul", 'D', 30, 30);
+                electrodomesticos[6].precioFinal();
+                electrodomesticos[7] = new P17SubTelevision(300, "negro", 'A', 15, 70, true);
+                electrodomesticos[7].precioFinal();
+                electrodomesticos[8] = new P17SubLavadora(150, "gris", 'B', 32, 48);
+                electrodomesticos[8].precioFinal();
+                electrodomesticos[9] = new P17SubTelevision(250, "gris", 'D', 17, 55, false);
+                electrodomesticos[9].precioFinal();
+
+                for (int i=0; i < electrodomesticos.length; i++){
+                    System.out.println(electrodomesticos[i].toString());
+                }
                 break;
 
-        }
+            case 18:
 
+                break;
+
+
+        }
 
 
 
