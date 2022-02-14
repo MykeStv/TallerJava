@@ -31,7 +31,7 @@ public class Main {
         System.out.println("16. Persona");
         System.out.println("17. Electrodomesticos");
         System.out.println("18. Serie y Videojuegos");
-        System.out.println("0. SALIR");
+        //System.out.println("0. SALIR");
 
         System.out.print("\nProblema: ");
         int choice = sc.nextInt();

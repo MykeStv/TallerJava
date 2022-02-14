@@ -24,7 +24,7 @@ public class P16Persona {
     public P16Persona(String nombre, int edad, char sexo) {
         this.nombre = nombre;
         this.edad = edad;
-        this.sexo = sexo;
+        this.sexo = comprobarSexo(sexo);
         //Valores por defecto
         this.peso = 0;
         this.altura = 0;
@@ -32,7 +32,7 @@ public class P16Persona {
     public P16Persona(String nombre, int edad, char sexo, double peso, double altura) {
         this.nombre = nombre;
         this.edad = edad;
-        this.sexo = sexo;
+        this.sexo = comprobarSexo(sexo);
         this.peso = peso;
         this.altura = altura;
     }
@@ -68,13 +68,10 @@ public class P16Persona {
     public char comprobarSexo(char sexoIngresado) {
         sexoIngresado = Character.toUpperCase(sexoIngresado);
         if (sexoIngresado == 'H') {
-            System.out.println("Es un Hombre");
             return 'H';
         } else if (sexoIngresado == 'M') {
-            System.out.println("Es una Mujer");
             return 'M';
         } else {
-            System.out.println("El sexo ingresado no es correcto");
             return 'H';
         }
 
