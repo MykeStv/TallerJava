@@ -30,6 +30,7 @@ public class Main {
         System.out.println("15. Programa menú de opciones");
         System.out.println("16. Persona");
         System.out.println("17. Electrodomesticos");
+        System.out.println("18. ");
 
         System.out.print("\nProblema: ");
         int choice = sc.nextInt();
@@ -243,10 +244,28 @@ public class Main {
                 electrodomesticos[9] = new P17SubTelevision(250, "gris", 'D', 17, 55, false);
                 electrodomesticos[9].precioFinal();
 
+                double precioElectrodomesticos = 0;
+                double precioTelevision = 0;
+                double precioLavadora = 0;
+
                 for (int i=0; i < electrodomesticos.length; i++){
                     System.out.println(electrodomesticos[i].toString());
+                    precioElectrodomesticos += electrodomesticos[i].getPrecio();
+
+                    if (electrodomesticos[i] instanceof P17SubTelevision){
+                        precioTelevision += electrodomesticos[i].getPrecio();
+                    } else if (electrodomesticos[i] instanceof P17SubLavadora) {
+                        precioLavadora += electrodomesticos[i].getPrecio();
+                    }
+
                 }
+
+                System.out.println("\nPrecio total Electrodomesticos: $" + precioElectrodomesticos);
+                System.out.println("Precio total Televisión: $" + precioTelevision);
+                System.out.println("Precio total Lavadora: $" + precioLavadora);
+
                 break;
+
 
             case 18:
 
